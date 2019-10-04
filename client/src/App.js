@@ -17,8 +17,8 @@ const client = new ApolloClient( {
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="component">
-        <img src={logo} alt="SpaceX" style={{ width: 800, height: 150, display: 'block', margin: 'auto' }}></img>
+      <div className="component" style={{ marginLeft: '75px', marginRight: '75px' }}>
+        <img src={logo} alt="SpaceX" style={{ width: 500, height: 100, display: 'block', margin: 'auto' }}></img>
         <Launches></Launches>
       </div>
     </ApolloProvider>
