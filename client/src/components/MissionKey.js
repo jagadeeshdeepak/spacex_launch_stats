@@ -7,7 +7,7 @@ export default function MissionKey() {
         <span className="px-3 mr-2 bg-success"/> = Success
       </p>
       <p>
-        <span className="px-3 mr-2 bg-danger"/> = Success
+        <span className="px-3 mr-2 bg-danger"/> = Failure
       </p>
     </div>
   )
