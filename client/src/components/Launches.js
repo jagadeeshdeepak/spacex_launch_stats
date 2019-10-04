@@ -8,10 +8,11 @@ import { Query } from 'react-apollo';
 
 // create a query similar to how we do it in graphiql
 // gql with back ticks is the way you define a query from the client side using gql library
-// LaunchesQuery is just naming the query for Launches.
+// LaunchesQuery is just naming the query for launches.
+// NOTE: the query structure should be exactly same as how we query
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
-    Launches {
+    launches {
       flight_number
       mission_name
       launch_date_local
@@ -24,7 +25,7 @@ export class Launches extends Component {
   render() {
     return (
       <div>
-        <h1 class="display-4 my-3">Launches</h1>
+        <h1 className="display-4 my-3">Launches</h1>
           <Query query={LAUNCHES_QUERY}>
             {
               ({ loading, error, data }) => {
