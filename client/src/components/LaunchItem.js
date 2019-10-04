@@ -2,7 +2,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
+// remember the router is rendering to Launch component for /launch/:flight_number
+// use Link to link the path to the component that it should render
+// instead of a tag with href, Link and Route works hand in hand
 export default function LaunchItem({ launch: {flight_number, mission_name, launch_date_local, launch_success } }) {
   return (
     <div className="card card-body mb-3">
@@ -15,7 +19,7 @@ export default function LaunchItem({ launch: {flight_number, mission_name, launc
           <p>Date: <Moment format="YYYY-MM-DD HH-mm">{ launch_date_local }</Moment></p>
         </div>
         <div className="col-md-3">
-          <button className="btn btn-secondary">Launch Details</button>
+          <Link to={`/launch/${flight_number}`} className="btn btn-secondary">Launch Details</Link>
         </div>
       </div>
     </div>
